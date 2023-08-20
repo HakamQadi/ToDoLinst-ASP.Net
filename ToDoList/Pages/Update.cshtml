@@ -1,0 +1,21 @@
+﻿@page
+@model TodoList.Pages.UpdateModel
+@{
+}
+<h4>Update Record</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <input type="hidden" asp-for="Todo.Id" />
+            <div class="form-group">
+                <label asp-for="Todo.Task" class="control-label"></label>
+                <input asp-for="Todo.Task" class="form-control" />
+                <span asp-validation-for="Todo.Task" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Update" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
