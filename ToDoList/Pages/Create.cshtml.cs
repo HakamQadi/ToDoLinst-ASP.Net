@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
 using TodoList.Models;
 
 namespace TodoList.Pages
@@ -21,30 +22,30 @@ namespace TodoList.Pages
         [BindProperty]
         public TodoModel? Todo { get; set; }
 
-
         public IActionResult OnPost()
         {
-            //search ModelState
+            // Search ModelState
             if (!ModelState.IsValid)
             {
                 return Page();
             }
 
-            
             using (var connection = new SqlConnection(_configuration.GetConnectionString("ConnectionString")))
             {
                 connection.Open();
-                var tableCmd = connection.CreateCommand();
-                tableCmd.CommandText =
-                   @$"INSERT INTO [ToDo].[dbo].[ToDoList] (text)
-                      VALUES('{Todo.Task}')";
 
-                tableCmd.ExecuteNonQuery();
-                connection.Close();
+                using (var command = new SqlCommand("InsertTodo", connection))
+                {
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Task", Todo.Task);
+
+                    command.ExecuteNonQuery();
+                }
+
+                connection.Close();   
             }
 
             return RedirectToPage("./Index");
-
         }
     }
 }

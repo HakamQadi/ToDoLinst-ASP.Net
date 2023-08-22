@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Orange\\source\\repos\\TodoList\\TodoList\\TodoList.csproj": {}
+    "C:\\Users\\Orange\\source\\repos\\ToDoList\\TodoList\\TodoList.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Orange\\source\\repos\\TodoList\\TodoList\\TodoList.csproj": {
+    "C:\\Users\\Orange\\source\\repos\\ToDoList\\TodoList\\TodoList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Orange\\source\\repos\\TodoList\\TodoList\\TodoList.csproj",
+        "projectUniqueName": "C:\\Users\\Orange\\source\\repos\\ToDoList\\TodoList\\TodoList.csproj",
         "projectName": "TodoList",
-        "projectPath": "C:\\Users\\Orange\\source\\repos\\TodoList\\TodoList\\TodoList.csproj",
+        "projectPath": "C:\\Users\\Orange\\source\\repos\\ToDoList\\TodoList\\TodoList.csproj",
         "packagesPath": "C:\\Users\\Orange\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Orange\\source\\repos\\TodoList\\TodoList\\obj\\",
+        "outputPath": "C:\\Users\\Orange\\source\\repos\\ToDoList\\TodoList\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Orange\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.151, )"
+            },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[5.1.1, )"

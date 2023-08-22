@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ncpyqNNAFVGoc5kxhSwTfM5WWPZhX7iQVNeR7CKIoSJ808iD0YT0dL071fJe5ogeftT7Muruum0UVHsEStYC2A==",
+  "dgSpecHash": "vQbwhBqMF4MD78esw/jjkJ0x6oQ4vgUNllT3QVwy8R/7MQ9ICJGBOTegWP+3XDedLsBBSApGYu8fOYIjQs48jA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Orange\\source\\repos\\TodoList\\TodoList\\TodoList.csproj",
+  "projectFilePath": "C:\\Users\\Orange\\source\\repos\\ToDoList\\TodoList\\TodoList.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Orange\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Orange\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\Orange\\.nuget\\packages\\dapper\\2.0.151\\dapper.2.0.151.nupkg.sha512",
     "C:\\Users\\Orange\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Orange\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Orange\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",

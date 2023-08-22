@@ -27,7 +27,11 @@ namespace TodoList.Pages
                 connection.Open();
                 var tableCmd = connection.CreateCommand();
                 tableCmd.CommandText = "SELECT * FROM [ToDo].[dbo].[ToDoList]";
-                var tableData = new List<TodoModel>();
+
+                //var procedureCMD = new SqlCommand("GET_TASKS", connection);
+                //procedureCMD.CommandType=System.Data.CommandType.StoredProcedure; 
+
+                  var tableData = new List<TodoModel>();
 
                 using (SqlDataReader reader = tableCmd.ExecuteReader())
                 {
