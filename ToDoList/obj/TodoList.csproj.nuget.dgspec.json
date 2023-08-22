@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Orange\\source\\repos\\ToDoList\\TodoList\\TodoList.csproj": {}
+    "C:\\Users\\Duser\\Desktop\\New folder (2)\\ToDoLinst-ASP.Net\\TodoList\\TodoList.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Orange\\source\\repos\\ToDoList\\TodoList\\TodoList.csproj": {
+    "C:\\Users\\Duser\\Desktop\\New folder (2)\\ToDoLinst-ASP.Net\\TodoList\\TodoList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Orange\\source\\repos\\ToDoList\\TodoList\\TodoList.csproj",
+        "projectUniqueName": "C:\\Users\\Duser\\Desktop\\New folder (2)\\ToDoLinst-ASP.Net\\TodoList\\TodoList.csproj",
         "projectName": "TodoList",
-        "projectPath": "C:\\Users\\Orange\\source\\repos\\ToDoList\\TodoList\\TodoList.csproj",
-        "packagesPath": "C:\\Users\\Orange\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Orange\\source\\repos\\ToDoList\\TodoList\\obj\\",
+        "projectPath": "C:\\Users\\Duser\\Desktop\\New folder (2)\\ToDoLinst-ASP.Net\\TodoList\\TodoList.csproj",
+        "packagesPath": "C:\\Users\\Duser\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Duser\\Desktop\\New folder (2)\\ToDoLinst-ASP.Net\\TodoList\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Orange\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Duser\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Data.SqlClient;
 using System.Data;
@@ -31,7 +31,7 @@ namespace TodoList.Pages
             {
                 connection.Open();
                 var tableCmd = connection.CreateCommand();
-                tableCmd.CommandText = "SELECT * FROM [ToDo].[dbo].[ToDoList] WHERE Id = @Id";
+                tableCmd.CommandText = "SELECT * FROM [ToDo].[dbo].[ToDo] WHERE Id = @Id";
                 tableCmd.Parameters.Add(new SqlParameter("@Id", SqlDbType.Int)).Value = id;
 
                 using (SqlDataReader reader = tableCmd.ExecuteReader())
@@ -52,11 +52,14 @@ namespace TodoList.Pages
             using (var connection = new SqlConnection(_configuration.GetConnectionString("ConnectionString")))
             {
                 connection.Open();
-                var tableCmd = connection.CreateCommand();
-                tableCmd.CommandText = $"DELETE from [ToDo].[dbo].[ToDoList] WHERE Id = {id}";
-                tableCmd.ExecuteNonQuery();
+                var cmd = connection.CreateCommand();
+                cmd.CommandType = CommandType.StoredProcedure; // Set command type to StoredProcedure
+                cmd.CommandText = "DeleteToDo"; // Name of the stored procedure
+                cmd.Parameters.Add(new SqlParameter("@Id", SqlDbType.Int)).Value = id;
 
+                cmd.ExecuteNonQuery();
             }
+
             return RedirectToPage("./Index");
         }
     }

@@ -31,7 +31,7 @@ namespace TodoList.Pages
             {
                 connection.Open();
                 var tableCmd = connection.CreateCommand();
-                tableCmd.CommandText = "SELECT * FROM [ToDo].[dbo].[ToDoList] WHERE Id = @Id";
+                tableCmd.CommandText = "SELECT * FROM [ToDo].[dbo].[ToDo] WHERE Id = @Id";
                 tableCmd.Parameters.Add(new SqlParameter("@Id", SqlDbType.Int)).Value = id;
 
                 using (SqlDataReader reader = tableCmd.ExecuteReader())
@@ -57,14 +57,18 @@ namespace TodoList.Pages
             using (var connection = new SqlConnection(_configuration.GetConnectionString("ConnectionString")))
             {
                 connection.Open();
-                var tableCmd = connection.CreateCommand();
-                tableCmd.CommandText =
-                   $"UPDATE [ToDo].[dbo].[ToDoList] SET text ='{Todo.Task}' WHERE Id = {Todo.Id}";
+                var cmd = connection.CreateCommand();
+                cmd.CommandType = CommandType.StoredProcedure; // Set command type to StoredProcedure
+                cmd.CommandText = "UpdateTask"; // Name of the stored procedure
+                cmd.Parameters.Add(new SqlParameter("@Id", SqlDbType.Int)).Value = Todo.Id;
+                cmd.Parameters.Add(new SqlParameter("@Task", SqlDbType.NVarChar, -1)).Value = Todo.Task;
 
-                tableCmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
             }
+
             return RedirectToPage("./Index");
         }
+
 
     }
 }
